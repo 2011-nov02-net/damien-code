@@ -15,10 +15,10 @@ namespace AcronymGenerator
             if (!string.IsNullOrWhiteSpace(userInput))
             {
                 string[] terms = userInput.Split(' ');
-                string acronymifiedResult = string.Join("", terms.Select(str => char.ToUpper(str[0])));
+                string acronymifiedResult = string.Join("", terms.Select(str => char.ToUpper(str.First())));
                 Console.WriteLine($"Generated: {acronymifiedResult}.");
             }
-            else Console.WriteLine($"Invalid input received (got{userInput}).");
+            else Console.WriteLine($"Invalid input received (got {userInput}).");
         }
     }
 }
