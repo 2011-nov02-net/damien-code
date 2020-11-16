@@ -8,6 +8,6 @@ namespace RockPaperScissors.Library.AI
     {
         private static Random s_Random = new Random();
 
-        public GameAction Play(GameAction userAction) => (GameAction)s_Random.Next(2);
+        public GameAction Play(GameAction userAction) => (GameAction)s_Random.Next(3);
     }
 }

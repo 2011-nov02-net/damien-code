@@ -1,12 +1,17 @@
-﻿namespace RockPaperScissors.Library
+﻿using System.Text.Json.Serialization;
+
+namespace RockPaperScissors.Library
 {
-    public struct GameHistory
+    public class GameHistory
     {
         private static readonly string[] s_GameActionStrings = new string[] { "Rock", "Paper", "Scissors" };
 
-        GameAction PlayerAction { get; }
-        GameAction AIAction { get; }
-        bool PlayerWins { get; }
+        [JsonPropertyName("player_action")]
+        public GameAction PlayerAction { get; set; } = 0;
+        [JsonPropertyName("ai_action")]
+        public GameAction AIAction { get; set; } = 0;
+        [JsonPropertyName("players_wins")]
+        public bool PlayerWins { get; set; } = false;
 
         public GameHistory(GameAction playerAction, GameAction aIAction, bool playerWins)
         {

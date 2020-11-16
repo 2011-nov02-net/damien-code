@@ -7,6 +7,6 @@ namespace RockPaperScissors.GameLibrary
 {
     public class Player
     {
-        public static GameAction PromptAction(string message) => (GameAction)ConsoleIO.ConsoleIO.PromptForInt(message, 0, 3, false);
+        public static GameAction PromptAction(string message) => (GameAction)ConsoleIO.ConsoleIO.PromptForInt(message, -1, 3, false);
     }
 }
